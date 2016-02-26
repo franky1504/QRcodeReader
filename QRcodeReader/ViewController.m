@@ -7,16 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "QRcodeReader.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<QRcodeReaderDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *aLabel;
+@property (weak, nonatomic) NSString *aString;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.aLabel.text = @"No Data";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Navigation
+- (IBAction)gotoQRscan:(id)sender {
+    QRcodeReader *qrcodeview = [[QRcodeReader alloc] init];
+    qrcodeview.delegate = self;
+    [self presentViewController:qrcodeview animated:YES completion:nil];
+}
+
+- (void)backAndReturnData:(NSString *)barcodeResult {
+    self.aString = barcodeResult;
+    self.aLabel.text = self.aString;
+}
 @end

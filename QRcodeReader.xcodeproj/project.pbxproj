@@ -13,6 +13,8 @@
 		7130F2201C809EE4007BDC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7130F21E1C809EE4007BDC45 /* Main.storyboard */; };
 		7130F2221C809EE4007BDC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7130F2211C809EE4007BDC45 /* Assets.xcassets */; };
 		7130F2251C809EE4007BDC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7130F2231C809EE4007BDC45 /* LaunchScreen.storyboard */; };
+		7130F22F1C809F1B007BDC45 /* QRcodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7130F22D1C809F1B007BDC45 /* QRcodeReader.m */; };
+		7130F2301C809F1B007BDC45 /* QRcodeReader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7130F22E1C809F1B007BDC45 /* QRcodeReader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		7130F2211C809EE4007BDC45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7130F2241C809EE4007BDC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7130F2261C809EE4007BDC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7130F22C1C809F1B007BDC45 /* QRcodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeReader.h; sourceTree = "<group>"; };
+		7130F22D1C809F1B007BDC45 /* QRcodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeReader.m; sourceTree = "<group>"; };
+		7130F22E1C809F1B007BDC45 /* QRcodeReader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRcodeReader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 		7130F2141C809EE4007BDC45 /* QRcodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				7130F22C1C809F1B007BDC45 /* QRcodeReader.h */,
+				7130F22D1C809F1B007BDC45 /* QRcodeReader.m */,
+				7130F22E1C809F1B007BDC45 /* QRcodeReader.xib */,
 				7130F2181C809EE4007BDC45 /* AppDelegate.h */,
 				7130F2191C809EE4007BDC45 /* AppDelegate.m */,
 				7130F21B1C809EE4007BDC45 /* ViewController.h */,
@@ -138,6 +146,7 @@
 			files = (
 				7130F2251C809EE4007BDC45 /* LaunchScreen.storyboard in Resources */,
 				7130F2221C809EE4007BDC45 /* Assets.xcassets in Resources */,
+				7130F2301C809F1B007BDC45 /* QRcodeReader.xib in Resources */,
 				7130F2201C809EE4007BDC45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +160,7 @@
 			files = (
 				7130F21D1C809EE4007BDC45 /* ViewController.m in Sources */,
 				7130F21A1C809EE4007BDC45 /* AppDelegate.m in Sources */,
+				7130F22F1C809F1B007BDC45 /* QRcodeReader.m in Sources */,
 				7130F2171C809EE4007BDC45 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -262,8 +272,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QRcodeReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fareastone.QRcodeReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fareastone.QRcodeScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -273,8 +284,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QRcodeReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fareastone.QRcodeReader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fareastone.QRcodeScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

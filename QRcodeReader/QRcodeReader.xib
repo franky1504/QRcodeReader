@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRcodeReader">
+            <connections>
+                <outlet property="interestView" destination="aNb-Tw-qBW" id="b2Q-hA-WaX"/>
+                <outlet property="qrcodeLabel" destination="3xC-IC-ASq" id="0Iq-Ei-cus"/>
+                <outlet property="scanView" destination="drX-e8-3aP" id="Vpc-8c-7VG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="oOU-Rl-GSO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drX-e8-3aP">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNb-Tw-qBW">
+                    <rect key="frame" x="35" y="159" width="250" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="Bgn-1q-Keg"/>
+                        <constraint firstAttribute="width" constant="250" id="PoN-bz-C4i"/>
+                        <constraint firstAttribute="height" constant="250" id="ZG3-3q-Bgj"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="zQf-0G-ryq"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xC-IC-ASq">
+                    <rect key="frame" x="20" y="417" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4UP-IQ-8Fc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-82-TuT">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <items>
+                        <barButtonItem systemItem="stop" id="bBb-ef-ExD">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backWithoutData:" destination="-1" id="ASe-N9-sDQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="7Ry-tx-XkR"/>
+                    </connections>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gBD-82-TuT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="4hx-vB-RCD"/>
+                <constraint firstItem="drX-e8-3aP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AsW-kg-kXk"/>
+                <constraint firstItem="drX-e8-3aP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Di4-3f-6A2"/>
+                <constraint firstAttribute="bottom" secondItem="drX-e8-3aP" secondAttribute="bottom" id="Hqo-74-ApP"/>
+                <constraint firstAttribute="trailing" secondItem="3xC-IC-ASq" secondAttribute="trailing" constant="20" id="HzI-0S-Tgg"/>
+                <constraint firstItem="3xC-IC-ASq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="IP6-qo-BgA"/>
+                <constraint firstItem="aNb-Tw-qBW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="J2C-02-eee"/>
+                <constraint firstAttribute="trailing" secondItem="drX-e8-3aP" secondAttribute="trailing" id="Q8h-sf-Nm3"/>
+                <constraint firstItem="gBD-82-TuT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UNH-et-jYf"/>
+                <constraint firstAttribute="trailing" secondItem="gBD-82-TuT" secondAttribute="trailing" id="WK8-d9-OWI"/>
+                <constraint firstItem="3xC-IC-ASq" firstAttribute="top" secondItem="aNb-Tw-qBW" secondAttribute="bottom" constant="8" id="Woj-K1-tan"/>
+                <constraint firstItem="aNb-Tw-qBW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="au1-nF-spd"/>
+            </constraints>
+            <point key="canvasLocation" x="455" y="407"/>
+        </view>
+    </objects>
+</document>
